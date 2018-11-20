@@ -2,34 +2,53 @@ package Java_Bank_Pursuit_HW_JIMENEZ_LUIS;
 
 import java.util.*;
 
-public class Customer {
+class Customer {
 
-  public void customerData() {
+  private void customerData() {
 
+    /* This is how to declare HashMap */
     HashMap<Integer, String> customerAccounts = new HashMap<>();
 
-    customerAccounts.put(01, "John Doe");
-    customerAccounts.put(02, "John Doe");
-    customerAccounts.put(03, "John Doe");
-    customerAccounts.put(04, "John Doe");
-    customerAccounts.put(05, "John Doe");
+    /*Adding elements to HashMap*/
+    customerAccounts.put(12345676, "Robert Smith");
+    customerAccounts.put(12345677, "Jennifer Sanchez");
+    customerAccounts.put(12345678, "Joan Summers");
+    customerAccounts.put(12345679, "Peter Pan");
+    customerAccounts.put(12345670, "Ivana Jameson");
 
-    String firstCustomer = customerAccounts.get(01);
-    String secondCustomer = customerAccounts.get(02);
-    String thirdCustomer = customerAccounts.get(03);
-    String fourthCustomer = customerAccounts.get(04);
-    String fifthCustomer = customerAccounts.get(05);
+    /* Display content using Iterator*/
+    Set set = customerAccounts.entrySet();
+    Iterator iterator = set.iterator();
 
+    while (iterator.hasNext()) {
+      Map.Entry mentry = (Map.Entry) iterator.next();
+      System.out.print("Account Number : " + mentry.getKey() + " Account Name: ");
+      System.out.println(mentry.getValue());
+    }
 
-    ArrayList<String> customers = new ArrayList<>();
+//    /* Get values based on key*/
+//    String var= customerAccounts.get(2);
+//    System.out.println("Value at index 2 is: "+var);
 
-    customers.add("\nJohn Doe1\n");
-    customers.add("John Doe2\n");
-    customers.add("John Doe3\n");
-    customers.add("John Doe4\n");
-    customers.add("John Doe5\n");
+//    /* Remove values based on key*/
+//    customerAccounts.remove(3);
+//    System.out.println("Map key and values after removal:");
+//
 
-    System.out.println(customers);
+//    Set set2 = customerAccounts.entrySet();
+//    Iterator iterator2 = set2.iterator();
+//    while(iterator2.hasNext()) {
+//      Map.Entry mentry2 = (Map.Entry)iterator2.next();
+//      System.out.print("Key is: "+mentry2.getKey() + " & Value is: ");
+//      System.out.println(mentry2.getValue());
+//    }
+
+  }
+
+  public Customer() {
+  }
+
+  public  void getCustomerData() {
 
   }
 

@@ -35,9 +35,9 @@ public class Bank {
       if (login.equals(bankTeller.getBankTellerUsername()) && password.equals(bankTeller.getBankTellerPassword())) {
         System.out.println("\nYou are now logged in...Welcome ");
       }
-      mainscreen();
+      mainScreen();
   }
-  public void mainscreen (){
+  public void mainScreen (){
     System.out.println("\nWhat would you like to do.. ");
     System.out.println("\n1: List Current Customers and their Accounts\n");
     System.out.println("\n2: Add a new account\n");
@@ -49,7 +49,7 @@ public class Bank {
 
     switch (choice){
       case "1":
-        customer.customerData();
+        Customer customer1 = new Customer();
         break;
       case "2":
         customer.addCustomer();
